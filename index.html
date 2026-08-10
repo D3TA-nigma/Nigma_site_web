@@ -3,27 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="carousselle.css">
     <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
     <title>Nigma</title>
 </head>
 <body>
+
+    <!-- ========================================= Navbar =========================================  -->
     <header class="navbar">
-        
-    <a href="#accueil" class="navbar-logo">
-        <img src="images/logo.png" alt="N.">
-    </a>
+        <a href="#accueil" class="navbar-logo">
+            <img src="images/logo.png" alt="N.">
+        </a>
 
-    <nav class="navbar-links">
-        <a href="#accueil">Accueil</a>
-        <a href="#apropos">À propos</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
+        <nav class="navbar-links">
+            <a href="#accueil">Accueil</a>
+            <a href="#apropos">À propos</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-    <button class="theme-button" aria-label="Changer le thème">
-        💡
-    </button>
-</header>
+        <button class="theme-button" aria-label="Changer le thème">
+            <img src="images/lum/ampoule-1.png" alt="ampoule1">
+        </button>
+    </header>
+
+    <!-- ========================================= Carousselle =========================================   -->
+
+    <section class="carousel" id="accueil">
+
+        <div class="carousel-track">
+
+         <div class="slide active">
+                <img src="images/carousel/projet1.png" alt="Projet 1">
+
+                <div class="slide-content">
+                    <p class="slide-category">DÉVELOPPEMENT INTERACTIF</p>
+                    <h1>Des expériences<br>qui ont du sens.</h1>
+                    <a href="#services">Découvrir →</a>
+                </div>
+            </div>
+
+         <div class="slide">
+                <img src="images/carousel/projet2.png" alt="Projet 2">
+
+                <div class="slide-content">
+                    <p class="slide-category">FORMATION</p>
+                    <h1>Apprendre<br>autrement.</h1>
+                    <a href="#services">Découvrir →</a>
+             </div>
+            </div>
+
+            <div class="slide">
+                <img src="images/carousel/projet3.png" alt="Projet 3">
+
+                <div class="slide-content">
+                    <p class="slide-category">SUR MESURE</p>
+                    <h1>Votre idée.<br>Notre expérience.</h1>
+                    <a href="#contact">Nous contacter →</a>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-btn prev" aria-label="Image précédente">‹</button>
+        <button class="carousel-btn next" aria-label="Image suivante">›</button>
+
+        <div class="carousel-dots"></div>
+
+    </section>
+
+<!-- ========================================= A PROPOS =========================================   -->
+    <section class="about" id="apropos">
+
+        <div class="about-header">
+            <h2>À propos</h2>
+            <div class="about-line"></div>
+        </div>
+
+        <p class="about-description">
+            Nous transformons des idées complexes en expériences interactives simples.
+        </p>
+
+        <h3 class="skills-title">Compétences</h3>
+
+        <div class="skills-container">
+
+            <div class="skill-card">
+                <img src="images/Comp/gameengine.png" alt="Godot">
+                <p>Game Engine</p>
+         </div>
+
+            <div class="skill-card">
+                <img src="images/Comp/frontend.png" alt="Front-end">
+                <p>Front-end</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="images/Comp/backend.png" alt="Back-end">
+                <p>Back-end</p>
+            </div>
+
+            <div class="skill-card">
+             <img src="images/Comp/creativiter.png" alt="Créativité">
+                <p>Créativité</p>
+         </div>
+
+        </div>
+
+    </section>
+<!-- ========================================= Services =========================================   -->
+    <section>
+
+    </section>
+<!-- ========================================= Contact =========================================   -->
+    <section>
+
+    </section>
+ <!-- ========================================= Footer =========================================   -->
+    <footer>
+
+    </footer>
+
+
 </body>
+<script src="script.js"></script>
 </html>

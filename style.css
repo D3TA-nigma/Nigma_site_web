@@ -97,3 +97,9 @@ body {
     font-size: 13px;
     cursor: pointer;
 }
+
+.theme-button img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}

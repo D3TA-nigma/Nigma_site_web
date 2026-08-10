@@ -1,0 +1,67 @@
+const slides = document.querySelectorAll(".slide");
+const nextButton = document.querySelector(".next");
+const prevButton = document.querySelector(".prev");
+const dotsContainer = document.querySelector(".carousel-dots");
+
+let currentSlide = 0;
+
+// Création des petits points
+slides.forEach((_, index) => {
+    const dot = document.createElement("button");
+
+    dot.classList.add("carousel-dot");
+
+    if (index === 0) {
+        dot.classList.add("active");
+    }
+
+    dot.addEventListener("click", () => {
+        currentSlide = index;
+        showSlide();
+    });
+
+    dotsContainer.appendChild(dot);
+    
+});
+
+const dots = document.querySelectorAll(".carousel-dot");
+
+function showSlide() {
+    slides.forEach(slide => {
+        slide.classList.remove("active");
+    });
+
+    dots.forEach(dot => {
+        dot.classList.remove("active");
+    });
+
+    slides[currentSlide].classList.add("active");
+    dots[currentSlide].classList.add("active");
+}
+
+nextButton.addEventListener("click", () => {
+    currentSlide++;
+
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+
+    showSlide();
+});
+
+prevButton.addEventListener("click", () => {
+    currentSlide--;
+
+    if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+    }
+
+    showSlide();
+});
+
+// carouselle deplacement 5sec
+
+setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide();
+}, 5000);

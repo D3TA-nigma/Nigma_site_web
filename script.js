@@ -65,3 +65,50 @@ setInterval(() => {
     currentSlide = (currentSlide + 1) % slides.length;
     showSlide();
 }, 5000);
+
+
+
+
+
+
+
+
+const serviceCards = document.querySelectorAll(".service-card");
+
+serviceCards.forEach(card => {
+
+    card.addEventListener("mousemove", (event) => {
+
+        const rect = card.getBoundingClientRect();
+
+        const mouseX = event.clientX - rect.left;
+        const mouseY = event.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateY =
+            ((mouseX - centerX) / centerX) * 10;
+
+        const rotateX =
+            ((centerY - mouseY) / centerY) * 10;
+
+        card.style.transform = `
+            perspective(700px)
+            rotateX(${rotateX}deg)
+            rotateY(${rotateY}deg)
+        `;
+    });
+
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.transform = `
+            perspective(700px)
+            rotateX(0deg)
+            rotateY(0deg)
+        `;
+
+    });
+
+});

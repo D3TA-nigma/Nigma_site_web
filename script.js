@@ -67,11 +67,7 @@ setInterval(() => {
 }, 5000);
 
 
-
-
-
-
-
+// services Card rotation // 
 
 const serviceCards = document.querySelectorAll(".service-card");
 

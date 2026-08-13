@@ -148,3 +148,74 @@
 .carousel-dot.active {
     background: white;
 }
+
+@media (max-width: 600px) {
+
+    .carousel {
+        height: 470px;
+    }
+
+    .slide img {
+        object-position: center;
+    }
+
+    .slide::after {
+        background: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.25)
+        );
+    }
+
+    .slide-content {
+        left: 25px;
+        right: 25px;
+        top: 52%;
+
+        max-width: none;
+    }
+
+    .slide-category {
+        margin-bottom: 12px;
+
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .slide-content h1 {
+        margin-bottom: 20px;
+
+        font-size: clamp(34px, 11vw, 48px);
+        line-height: 1.05;
+
+        letter-spacing: -1.5px;
+    }
+
+    .slide-content a {
+        font-size: 13px;
+    }
+
+    .carousel-btn {
+        width: 36px;
+        height: 36px;
+
+        font-size: 24px;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+
+    .carousel-dots {
+        bottom: 15px;
+    }
+
+    .carousel-dot {
+        width: 6px;
+        height: 6px;
+    }
+}

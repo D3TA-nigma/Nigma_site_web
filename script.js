@@ -108,3 +108,32 @@ serviceCards.forEach(card => {
     });
 
 });
+
+
+
+
+// burger  menu
+
+const burgerButton = document.querySelector(".burger-button");
+const navbarLinks = document.querySelector(".navbar-links");
+
+burgerButton.addEventListener("click", () => {
+
+    burgerButton.classList.toggle("active");
+    navbarLinks.classList.toggle("active");
+
+});
+
+
+// Ferme le menu après avoir cliqué sur un lien
+
+navbarLinks.querySelectorAll("a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        burgerButton.classList.remove("active");
+        navbarLinks.classList.remove("active");
+
+    });
+
+});

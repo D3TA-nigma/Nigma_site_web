@@ -166,29 +166,47 @@
    RESPONSIVE
 ========================================= */
 
-@media (max-width: 900px) {
-
-    .services-grid {
-        grid-template-columns: repeat(2, 220px);
-
-        justify-content: center;
-    }
-
-}
-
-@media (max-width: 550px) {
+@media (max-width: 750px) {
 
     .services {
-        padding-left: 20px;
-        padding-right: 95px;
+        padding: 55px 20px 50px;
     }
 
-    .services-grid {
-        grid-template-columns: 220px;
+    .services-header {
+        margin-bottom: 45px;
     }
 
     .services-header h2 {
         font-size: 34px;
     }
 
+    .services-line {
+        width: 150px;
+        height: 6px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+
+        justify-items: center;
+
+        gap: 30px;
+    }
+
+    .service-card {
+        width: min(338px, 100%);
+        height: auto;
+    }
+
+    .service-image {
+        height: 222px;
+    }
+
+    .itch-button {
+        margin-top: 35px;
+
+        padding: 11px 23px;
+
+        font-size: 14px;
+    }
 }

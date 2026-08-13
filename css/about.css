@@ -83,3 +83,67 @@
     font-size: 13px;
     font-weight: 400;
 }
+
+
+
+@media (max-width: 600px) {
+
+    .about {
+        padding: 50px 20px 60px;
+    }
+
+    .about-header h2 {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+
+    .about-line {
+        width: 150px;
+        height: 6px;
+    }
+
+    .about-description {
+        margin-top: 45px;
+
+        font-size: 16px;
+        line-height: 1.6;
+
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .skills-title {
+        margin-top: 55px;
+        margin-bottom: 40px;
+
+        font-size: 25px;
+    }
+
+    .skills-container {
+        display: grid;
+        grid-template-columns: repeat(2, 140px);
+
+        justify-content: center;
+
+        gap: 25px 20px;
+    }
+
+    .skill-card {
+        width: 140px;
+        height: 150px;
+
+        border-radius: 14px;
+
+        gap: 18px;
+    }
+
+    .skill-card img {
+        width: 65px;
+        height: 55px;
+    }
+
+    .skill-card p {
+        font-size: 12px;
+    }
+}

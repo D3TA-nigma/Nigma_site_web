@@ -1,0 +1,75 @@
+/* =========================================
+   ANIMATION CHANGEMENT DE THEME
+========================================= */
+
+.about,
+.services,
+.contact,
+.footer,
+.about-line,
+.services-line,
+.contact-line {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark-mode .about {
+    background: #111;
+    color: #fff;
+}
+
+body.dark-mode .about-line {
+    background: #fff;
+}
+
+body.dark-mode .services {
+    background: #111;
+    color: #fff;
+}
+
+body.dark-mode .services-line {
+    background: #fff;
+}
+
+body.dark-mode .contact {
+    background: #111;
+    color: #fff;
+}
+
+body.dark-mode .contact-line {
+    background: #fff;
+}
+
+body.dark-mode .footer {
+    background: #111;
+    color: #fff;
+    border-top-color: #fff;
+}
+
+body.dark-mode .footer-links a {
+    color: #fff;
+}
+
+/* Cartes compétences */
+
+body.dark-mode .skill-card {
+    background: #282828;
+
+    border: 1px solid #333333;
+}
+
+
+/* Cartes services */
+
+body.dark-mode .service-card {
+    background: #282828;
+
+    border: 1px solid #333333;
+}

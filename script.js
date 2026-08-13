@@ -124,9 +124,6 @@ burgerButton.addEventListener("click", () => {
 
 });
 
-
-// Ferme le menu après avoir cliqué sur un lien
-
 navbarLinks.querySelectorAll("a").forEach(link => {
 
     link.addEventListener("click", () => {
@@ -135,5 +132,23 @@ navbarLinks.querySelectorAll("a").forEach(link => {
         navbarLinks.classList.remove("active");
 
     });
+
+});
+
+// changement de theme 
+
+
+const themeButton = document.querySelector(".theme-button");
+const themeIcon = themeButton.querySelector("img");
+
+themeButton.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+        themeIcon.src = "./images/lum/ampoule-0.png";
+    } else {
+        themeIcon.src = "./images/lum/ampoule-1.png";
+    }
 
 });

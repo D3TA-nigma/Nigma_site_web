@@ -28,28 +28,9 @@
     visibility: visible;
 }
 
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Assombrit légèrement l'image pour rendre le texte lisible */
-.slide::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.65),
-        rgba(0, 0, 0, 0.05)
-    );
-}
-
 .slide-content {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
 
     left: 8%;
     top: 50%;
@@ -144,6 +125,37 @@
 
     cursor: pointer;
 }
+
+
+
+.slide-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+.carousel-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.05)
+    );
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
 
 .carousel-dot.active {
     background: white;

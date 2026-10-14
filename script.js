@@ -18,6 +18,7 @@ slides.forEach((_, index) => {
     dot.addEventListener("click", () => {
         currentSlide = index;
         showSlide();
+        resetAutoSlide();
     });
 
     dotsContainer.appendChild(dot);
@@ -25,6 +26,18 @@ slides.forEach((_, index) => {
 });
 
 const dots = document.querySelectorAll(".carousel-dot");
+
+// carouselle deplacement 5sec
+
+function resetAutoSlide() {
+    clearInterval(currentSlide);
+
+    currentSlide = setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide();
+    }, 5000);
+}
+
 
 function showSlide() {
     slides.forEach(slide => {
@@ -40,6 +53,7 @@ function showSlide() {
 }
 
 nextButton.addEventListener("click", () => {
+
     currentSlide++;
 
     if (currentSlide >= slides.length) {
@@ -47,6 +61,7 @@ nextButton.addEventListener("click", () => {
     }
 
     showSlide();
+    resetAutoSlide();
 });
 
 prevButton.addEventListener("click", () => {
@@ -57,15 +72,11 @@ prevButton.addEventListener("click", () => {
     }
 
     showSlide();
+    resetAutoSlide();
+
 });
 
-// carouselle deplacement 5sec
-
-setInterval(() => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide();
-}, 5000);
-
+resetAutoSlide();
 
 // services Card rotation // 
 

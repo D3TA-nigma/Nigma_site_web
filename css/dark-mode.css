@@ -65,6 +65,11 @@ body.dark-mode .skill-card {
     border: 1px solid #333333;
 }
 
+body.dark-mode .skill-card-service {
+    background: #282828;
+    border: 1px solid #333333;
+}
+
 
 /* Cartes services */
 
